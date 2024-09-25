@@ -14,10 +14,10 @@ class UserComment {
 
 class _CommunityScreenState extends State<CommunityScreen> {
   final List<UserComment> comments = [
-    UserComment(username: "Usuario1", comment: "Me siento mucho mejor desde que empecé a hablar sobre mis problemas."),
-    UserComment(username: "Usuario2", comment: "La terapia realmente me ha ayudado a enfrentar mis miedos."),
-    UserComment(username: "Usuario3", comment: "A veces solo necesitas a alguien que te escuche."),
-    UserComment(username: "Usuario4", comment: "Recuerda que no estás solo en esto."),
+    UserComment(username: "Rosa12", comment: "Me siento mucho mejor desde que empecé a hablar sobre mis problemas."),
+    UserComment(username: "Maria23", comment: "La terapia realmente me ha ayudado a enfrentar mis miedos."),
+    UserComment(username: "MGraci@3", comment: "A veces solo necesitas a alguien que te escuche."),
+    UserComment(username: "Andre4", comment: "Recuerda que no estás solo en esto <3."),
   ];
 
   final TextEditingController _controller = TextEditingController();

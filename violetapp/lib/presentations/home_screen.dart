@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
     return ElevatedButton(
       onPressed: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => EmergencyScreen()),
+        MaterialPageRoute(builder: (context) => EmergencyAssistanceScreen()),
       ),
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white, 
