@@ -11,36 +11,37 @@ class PsychologicalScreen extends StatelessWidget {
         title: Text('Apoyo Psicológico'),
         backgroundColor: Colors.purple,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Botón de Psicólogos
-            _buildModuleButton(
-              context,
-              'Psicólogos',
-              Icons.man,
-              PsychologicsScreen(),
-            ),
-            SizedBox(height: 16),
-            // Botón de Centros de Apoyo
-            _buildModuleButton(
-              context,
-              'Centros de Apoyo',
-              Icons.handshake,
-              SupportCentersScreen(),
-            ),
-            SizedBox(height: 16),
-            // Botón de VioletaCaps
-            _buildModuleButton(
-              context,
-              'VioletaCaps',
-              Icons.book,
-              VioletCapsScreen(),
-            ),
-            SizedBox(height: 16),
-          ],
+      body: Center( // Cambiado para centrar los botones
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Botón de Psicólogos
+              _buildModuleButton(
+                context,
+                'Psicólogos',
+                Icons.man,
+                PsychologicsScreen(),
+              ),
+              SizedBox(height: 16),
+              // Botón de Centros de Apoyo
+              _buildModuleButton(
+                context,
+                'Centros de Apoyo',
+                Icons.handshake,
+                SupportCentersScreen(),
+              ),
+              SizedBox(height: 16),
+              // Botón de VioletaCaps
+              _buildModuleButton(
+                context,
+                'VioletaCaps',
+                Icons.book,
+                VioletCapsScreen(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -50,7 +51,7 @@ class PsychologicalScreen extends StatelessWidget {
   Widget _buildModuleButton(BuildContext context, String title, IconData icon, Widget screen) {
     return ElevatedButton.icon(
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white, 
+        foregroundColor: Colors.white,
         backgroundColor: Colors.purple, // Color del botón
         padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
         shape: RoundedRectangleBorder(
@@ -71,5 +72,3 @@ class PsychologicalScreen extends StatelessWidget {
     );
   }
 }
-
-

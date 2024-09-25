@@ -38,6 +38,24 @@ class PsychologicsScreen extends StatelessWidget {
       specialties: 'Neuropsicología, Demencias, Alzheimer',
       areaOfInterest: 'Trastornos neurodegenerativos',
     ),
+    Psychologist(
+      name: 'Dra. Silvia Torres',
+      title: 'Psicóloga Deportiva',
+      specialties: 'Psicología del deporte, Motivación',
+      areaOfInterest: 'Rendimiento deportivo',
+    ),
+    Psychologist(
+      name: 'Dr. Luis Martínez',
+      title: 'Psicólogo Social',
+      specialties: 'Psicología comunitaria, Intervenciones grupales',
+      areaOfInterest: 'Bienestar comunitario',
+    ),
+    Psychologist(
+      name: 'Dra. Paula Rojas',
+      title: 'Psicóloga de la Educación',
+      specialties: 'Orientación educativa, Dificultades de aprendizaje',
+      areaOfInterest: 'Desarrollo educativo',
+    ),
   ];
 
   @override
@@ -51,10 +69,10 @@ class PsychologicsScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Número de columnas en la matriz
-            crossAxisSpacing: 10.0, // Espaciado entre columnas
-            mainAxisSpacing: 10.0, // Espaciado entre filas
-            childAspectRatio: 0.75, // Proporción de ancho/alto de las tarjetas
+            crossAxisCount: 2,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 10.0,
+            childAspectRatio: 0.8,
           ),
           itemCount: psychologists.length,
           itemBuilder: (context, index) {
@@ -78,11 +96,12 @@ class PsychologicsScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               CircleAvatar(
                 radius: 30,
                 backgroundColor: Colors.purple,
-                child: Icon(Icons.person, size: 40, color: Colors.white), // Placeholder para la foto o ícono
+                child: Icon(Icons.person, size: 40, color: Colors.white),
               ),
               SizedBox(height: 10),
               Text(
@@ -101,6 +120,8 @@ class PsychologicsScreen extends StatelessWidget {
                 psychologist.specialties,
                 style: TextStyle(fontSize: 12, color: Colors.grey[700]),
                 textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
               ),
               SizedBox(height: 5),
               Text(
@@ -127,7 +148,7 @@ class PsychologicsScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.purple,
-                child: Icon(Icons.person, size: 60, color: Colors.white), // Placeholder para la foto o ícono
+                child: Icon(Icons.person, size: 60, color: Colors.white),
               ),
               SizedBox(height: 20),
               Text(
